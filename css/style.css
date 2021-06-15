@@ -166,7 +166,13 @@ li.user:hover{
 
 .sidenav {
     width: 260px;
+    padding-right: 15px;
     height: calc(100vh - 65px);
+    overflow: hidden;
+}
+
+.sidenav.ativo {
+    
 }
 
 .sidenav .escrever {
@@ -197,6 +203,14 @@ li.user:hover{
     display: block;
 }
 
+/* email__body */
+
+.email__body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
 /* sidenav__navegacoes */
 
 .sidenav__navegacoes {
@@ -223,12 +237,25 @@ li.user:hover{
     background: rgba(0, 0, 0, 0.1);
 }
 
+.sidenav__item-ativo {
+    background: #FCE8E6;   
+}
+
+li.sidenav__item-ativo:hover {
+    background: #FCE8E6;
+}
+
 .sidenav__navegacoes li a {
     display: flex;
     align-items: center;
     padding: 5px 0 5px 30px;
     text-decoration: none;
     color: #202124;
+}
+
+li.sidenav__item-ativo a {
+    color: #d93025;
+    font-weight: 700;
 }
 
 #icon-tela {--local-img: url('../img/icon-tela.png')}
@@ -267,17 +294,187 @@ li.user:hover{
     cursor: pointer;
 }
 
-.navegacoes__user::before,  .navegacoes__user::after {
+.user__img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background: #ccc;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user__icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background: url('../img/icon-plus.svg');
+    margin-left: 70px;
+}
+
+/* content */ 
+
+.content {
+    width: 100%;
+    height: calc(100vh - 65px);
+    overflow-y: auto;
+}
+
+.content__header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.select__emails,
+.email__select {
+    width: 15px;
+    height: 15px;
+    display: block;
+    border: 2px solid #333;
+    border-radius: 2px;
+    margin: 10px;
+}
+
+.icon-atualizar,
+.icon-mais,
+.select__email__container {
+    margin: 4px 2px;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: no-repeat center center;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.icon-atualizar {
+    background-image: url('../img/icon-recarregar.svg');
+}
+
+.icon-mais {
+    background-image: url('../img/icon-three.svg');
+}
+
+.icon-atualizar:hover,
+.icon-mais:hover,
+.select__email__container:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* content__body */
+
+.content__body .content__nav ul {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.content__body .content__nav li {
+    position: relative;
+    margin-right: 5px;
+}
+
+.content__body .content__nav a {
+    padding: 15px 120px 15px 8px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #333333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.content__body .content__nav a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#icon-principal {--local-img: url('../img/icon-tela.png')}
+#icon-social {--local-img: url('../img/icon-social.png')}
+#icon-promocao {--local-img: url('../img/icon-promocao.png')}
+
+.content__body .content__nav a::before {
     content: '';
     width: 24px;
     height: 24px;
-    margin-right: 10px;
     display: block;
-    border-radius: 50%;
-    background: #ccc;
+    margin-right: 15px;
+    background: var(--local-img) no-repeat center center;
+    opacity: 0.6;
 }
 
-.navegacoes__user::after {
-    margin: 0 0 0 110px;
-    background: url('../img/icon-plus.svg') no-repeat center center;
+.content__body .content__nav a.ativo::before {
+    opacity: 1 !important;
+}
+
+.content__body .content__nav a.ativo::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    display: block;
+    position: absolute;
+    background: currentColor;
+    bottom: 0;
+    left: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+#icon-principal.ativo {
+    color: #d93025;
+    --local-img: url('../img/icon-tela-ativo.png')
+}
+
+#icon-social.ativo {
+    color: #1a73e8;
+    --local-img: url('../img/icon-social-ativo.png');
+}
+
+#icon-promocao.ativo {
+    color: #188038;
+    --local-img: url('../img/icon-promocao-ativo.png');
+}
+
+/* Emails - content */
+
+.content__email_list {
+}
+
+.content__email_list a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    color: #202124;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.email__name {
+    margin-left: 15px;
+    font-weight: 700;
+}
+
+.email__content {
+    margin-left: 60px;
+    color: #5f6368;
+}
+
+.email_icons {
+    display: flex;
+    align-items: center;
+    opacity: .2;
+}
+
+.email__select {
+    margin: 0 10px;
+}
+
+.email__start {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background: url('../img/icon-star-vazia.png') no-repeat center center;
 }

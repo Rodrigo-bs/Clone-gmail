@@ -21,3 +21,7 @@ img, svg{
 button, input {
     outline: none;
 }
+
+ul li {
+    list-style: none;
+}

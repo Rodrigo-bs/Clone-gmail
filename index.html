@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/import.css">
     <title>Gmail</title>
   </head>
@@ -37,34 +37,147 @@
       </nav>
     </header>
 
-    <nav class="sidenav">
-      <button class="escrever">Escrever</button>
+    <section class="email__body">
+      <nav class="sidenav">
+        <button class="escrever">Escrever</button>
+  
+        <div class="sidenav__navegacoes">
+          <ul>
+            <li class="sidenav__item-ativo"><a href="#" id="icon-tela">Caixa de Entrada</a></li>
+            <li><a href="#" id="icon-start">Com estrelas</a></li>
+            <li><a href="#" id="icon-adiado">Adiados</a></li>
+            <li><a href="#" id="icon-enviados">Enviados</a></li>
+            <li><a href="#" id="icon-rascunho">Rascunhos</a></li>
+            <li><a href="#" class="icon-seta">Junk</a></li>
+            <li><a href="#" class="icon-seta">Unwanted</a></li>
+          </ul>
+        </div>
+  
+        <div class="sidenav__navegacoes">
+          <h1>Meet</h1>
+          <ul>
+            <li><a href="#" id="icon-camera">Nova reunião</a></li>
+            <li><a href="#" id="icon-teclado">Participar de reunião</a></li>
+          </ul>
+        </div>
+  
+        <div class="sidenav__navegacoes">
+          <h1>Hangouts</h1>
+  
+          <div class="navegacoes__user">
+            <div class="user__img"></div>
+            <div class="user__text">Rodrigo</div>
+            <div class="user__icon"></div>
+          </div>
+        </div>
+      </nav>
+  
+      <main class="content">
+        <section class="content__header">
+          <div class="select__email__container">
+            <div class="select__emails"></div>
+          </div>
 
-      <div class="sidenav__navegacoes">
-        <ul>
-          <li><a href="#" id="icon-tela">Caixa de Entrada</a></li>
-          <li><a href="#" id="icon-start">Com estrelas</a></li>
-          <li><a href="#" id="icon-adiado">Adiados</a></li>
-          <li><a href="#" id="icon-enviados">Enviados</a></li>
-          <li><a href="#" id="icon-rascunho">Rascunhos</a></li>
-          <li><a href="#" class="icon-seta">Junk</a></li>
-          <li><a href="#" class="icon-seta">Unwanted</a></li>
-        </ul>
-      </div>
+          <div class="icon-atualizar"></div>
+          <div class="icon-mais"></div>
+        </section>
 
-      <div class="sidenav__navegacoes">
-        <h1>Meet</h1>
-        <ul>
-          <li><a href="#" id="icon-camera">Nova reunião</a></li>
-          <li><a href="#" id="icon-teclado">Participar de reunião</a></li>
-        </ul>
-      </div>
+        <section class="content__body">
+          <nav class="content__nav">
+            <ul>
+              <li><a href="#" class="ativo" id="icon-principal" data-content="op-nav">Principal</a></li>
+              <li><a href="#" id="icon-social" data-content="op-nav">Social</a></li>
+              <li><a href="#" id="icon-promocao" data-content="op-nav">Promoções</a></li>
+            </ul>
+          </nav>
+          <div class="content__email_list">
+            <ul>
+              <li>
+                <a href="#">
+                  <div class="email_icons">
+                    <div class="email__select"></div>
+                    <div class="email__start"></div>
+                  </div>
+                  <p class="email__name">Emaill Name</p>
+                  <p class="email__content">Lorem ipsum dolor sit amet consectetur adipisicing elit....</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="email_icons">
+                    <div class="email__select"></div>
+                    <div class="email__start"></div>
+                  </div>
+                  <p class="email__name">Emaill Name</p>
+                  <p class="email__content">Lorem ipsum dolor sit amet consectetur adipisicing elit....</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="email_icons">
+                    <div class="email__select"></div>
+                    <div class="email__start"></div>
+                  </div>
+                  <p class="email__name">Emaill Name</p>
+                  <p class="email__content">Lorem ipsum dolor sit amet consectetur adipisicing elit....</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="email_icons">
+                    <div class="email__select"></div>
+                    <div class="email__start"></div>
+                  </div>
+                  <p class="email__name">Emaill Name</p>
+                  <p class="email__content">Lorem ipsum dolor sit amet consectetur adipisicing elit....</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="email_icons">
+                    <div class="email__select"></div>
+                    <div class="email__start"></div>
+                  </div>
+                  <p class="email__name">Emaill Name</p>
+                  <p class="email__content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="email_icons">
+                    <div class="email__select"></div>
+                    <div class="email__start"></div>
+                  </div>
+                  <p class="email__name">Emaill Name</p>
+                  <p class="email__content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="email_icons">
+                    <div class="email__select"></div>
+                    <div class="email__start"></div>
+                  </div>
+                  <p class="email__name">Emaill Name</p>
+                  <p class="email__content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <div class="email_icons">
+                    <div class="email__select"></div>
+                    <div class="email__start"></div>
+                  </div>
+                  <p class="email__name">Emaill Name</p>
+                  <p class="email__content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </section>
 
-      <div class="sidenav__navegacoes">
-        <h1>Hangouts</h1>
-
-        <div class="navegacoes__user">Rodrigo</div>
-      </div>
-    </nav>
+    <script src="./js/script.js" type="module"></script>
   </body>
 </html>
