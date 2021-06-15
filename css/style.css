@@ -72,6 +72,13 @@
     padding: 0 56px;
     font-size: 1.6rem;
     font-weight: 200;
+    transition: .2s;
+}
+
+.header__pesquisar input:focus {
+    background: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px 5px 0 0;
 }
 
 .header__pesquisar > *:not(input){
@@ -94,7 +101,8 @@
 }
 
 .header__pesquisar button:hover,
-.header__pesquisar span:hover {
+.header__pesquisar span:hover,
+.header__menu_user li:hover {
     background: rgba(0, 0, 0, 0.1);
 }
 
@@ -130,6 +138,7 @@
 }
 
 .header__menu_user li {
+    border-radius: 50%;
     list-style: none;
     width: 40px;
     height: 40px;
@@ -147,4 +156,128 @@
     height: 34px;
     background: #ccc;
     border-radius: 50%;
+}
+
+li.user:hover{
+    background: none;
+}
+
+/* sidenav */
+
+.sidenav {
+    width: 260px;
+    height: calc(100vh - 65px);
+}
+
+.sidenav .escrever {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #3c4043; 
+    padding: 0 24px 0 0;
+    background: #fff;
+    border: none;
+    box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
+    transition: .2s;
+    border-radius: 50px;
+    margin: 15px 0px 10px 10px;
+    cursor: pointer;
+}
+
+.sidenav .escrever:hover {
+    box-shadow: 0px 4px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.sidenav .escrever::before {
+    content: '';
+    width: 56px;
+    height: 48px;
+    background: url('../img/plus-button.png') no-repeat center center;
+    display: block;
+}
+
+/* sidenav__navegacoes */
+
+.sidenav__navegacoes {
+    margin-bottom: 20px;
+}
+
+.sidenav__navegacoes h1 {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    font-size: 1.4rem;
+    padding: 15px 0 10px 30px;
+    color: #202124;
+}
+
+.sidenav__navegacoes li {
+    width: 100%;
+    font-size: 1.4rem; 
+    font-weight: 400;
+    border-radius: 0 15px 15px 0;
+    overflow: hidden;
+}
+
+.sidenav__navegacoes li:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.sidenav__navegacoes li a {
+    display: flex;
+    align-items: center;
+    padding: 5px 0 5px 30px;
+    text-decoration: none;
+    color: #202124;
+}
+
+#icon-tela {--local-img: url('../img/icon-tela.png')}
+#icon-start {--local-img: url('../img/icon-star.png')}
+#icon-adiado {--local-img: url('../img/icon-relogio.png')}
+#icon-enviados {--local-img: url('../img/icon-enviar.png')}
+#icon-rascunho {--local-img: url('../img/icon-file.png')}
+#icon-camera {--local-img: url('../img/icon-camera.png')}
+#icon-teclado {--local-img: url('../img/icon-teclado.png')}
+
+.sidenav__navegacoes li a::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    display: block;
+    background: var(--local-img) no-repeat center center;
+    opacity: 0.6;
+    margin-right: 15px;
+}
+
+.sidenav__navegacoes li a.icon-seta::before {
+    content: '🠶';
+    display: grid;
+    place-items: center;
+    vertical-align: middle;
+    font-size: 1.5rem;
+}
+
+.navegacoes__user {
+    margin: 0 5px 0 30px;
+    padding: 5px 0 5px;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.navegacoes__user::before,  .navegacoes__user::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    display: block;
+    border-radius: 50%;
+    background: #ccc;
+}
+
+.navegacoes__user::after {
+    margin: 0 0 0 110px;
+    background: url('../img/icon-plus.svg') no-repeat center center;
 }
